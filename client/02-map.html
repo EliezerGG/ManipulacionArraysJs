@@ -16,10 +16,13 @@
         ];
         const app = document.querySelector("#app");
 
-        products.forEach(product => {
-            app.innerHTML += `<li>${product.title} : ${product.price}</li>`
+        const lista = products.map(product => {
+            return `<li>${product.title} : ${product.price}</li>`
         })
 
+        app.innerHTML = lista.join('');
+
+        ///
         const tasks = [
         {
           task: 'Tarea 1',
@@ -45,14 +48,15 @@
 
        const app2 = document.querySelector('#task');
 
-       tasks.forEach(task => {
-        app2.innerHTML += 
-        `<li>
+       const lista2 = tasks.map(task => {
+        return `<li>
             Nombre: ${tasks.task} ||
             Descripcion: ${task.descp} -
             <input type="checkbox" ${task.done ? 'checked': ''}/>    
-        </li>`
+             </li>`
        });
+
+       app2.innerHTML = lista2.join('');
 
 
     </script>
