@@ -34,3 +34,16 @@ const orders = [
         delivered: true,
     },
 ];
+
+//////sort ///////
+months.sort()
+console.log(months);
+
+numbers.sort((a,b) => a-b)
+console.log(numbers);
+
+words.sort((a,b)=> a.localeCompare(b))
+console.log(words);
+
+orders.sort((a,b) => b.total - a.total)
+console.log(orders);
